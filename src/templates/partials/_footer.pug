@@ -1,0 +1,15 @@
+.container.page-footer__container
+	h2.page-footer__title(data-scrambler) Contacts
+	p.page-footer__content(data-scrambler)
+		span.js-data-scrambler-item Send us a note to
+		a.is-underlined.js-data-scrambler-item.crsor-trgr(href="mailto:hello@bulba.com" data-cursor-type="plus") hello@bulba.com
+	ul.social-links.page-footer__social-links
+		li
+			a.social-links__link.page-footer__social-link.crsor-trgr(href="https://www.facebook.com/bulbaventures/" target="_blank"  data-cursor-type="plus")
+				+icon('fb')
+		li
+			a.social-links__link.page-footer__social-link.crsor-trgr(href="https://www.linkedin.com/company/bulba-ventures/" target="_blank" data-cursor-type="plus")
+				+icon('linkedin')
+	p.page-footer__copyright(data-scrambler) &copy; 2018 bulba ventures
+	a.arrow.arrow--up.page-footer__arrow.js-scroll-to.crsor-trgr#arrow-up(href="#header" data-cursor-type="plus")
+		span.arrow__inner

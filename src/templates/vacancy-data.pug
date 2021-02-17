@@ -1,0 +1,172 @@
+include ./partials/_jobs-card
+
+//- -
+//- 	var jobs = [
+//- 		{
+//- 			title:'Android Engineer, Mobile Telemetry',
+//- 			company:'Voir',
+//- 			location:'San Francisco, Washington, D.C., and Helsinki'},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer, Mobile Telemetry',
+//- 			company:'Voir',
+//- 			location:'San Francisco, Washington, D.C., and Helsinki'},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer, Mobile Telemetry',
+//- 			company:'Voir',
+//- 			location:'San Francisco, Washington, D.C., and Helsinki'},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer, Mobile Telemetry',
+//- 			company:'Voir',
+//- 			location:'San Francisco, Washington, D.C., and Helsinki'},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 		{
+//- 			title:'Android Engineer',
+//- 			company:'Maps.me',
+//- 			location:'Minsk, Belarus '},
+//- 	]
+
+//- ul.jobs-tile
+//- 	each job in jobs
+//- 		+jobs-card({title:job.title,company:job.company,location:job.location})
+
+script.
+	var newJobLoad = [
+		{
+			id: '0',
+			position :'Android Engineer, Mobile Telemetry',
+			filterPosition: ['positon-0','positon-1', 'positon-3'],
+			location:'San Francisco, Washington and Helsinki',
+			filterLocation: ['location-0', 'location-3', 'location-4', 'location-2'],
+			company:'Voir',
+			filterCompany: ['company-0','company-1'],
+			link: 'jobs.html'
+			},
+		{
+			id: '1',
+			position :'Android Engineer',
+			filterPosition: ['positon-0','positon-1'],
+			location:'Helsinki',
+			filterLocation: ['location-0', 'location-2'],
+			company:'Maps.me',
+			filterCompany: ['company-0','company-2'],
+			link: 'jobs.html'
+			},
+		{
+			id: '2',
+			position :'Frontend Developer',
+			filterPosition: ['positon-0','positon-2'],
+			location:'Washington',
+			filterLocation: ['location-0', 'location-4'],
+			company:'Voir',
+			filterCompany: ['company-0','company-1'],
+			link: 'jobs.html'
+			},
+		{
+			id: '3',
+			position :'Android Engineer',
+			filterPosition: ['positon-0','positon-1'],
+			location:'Minsk, Belarus ',
+			filterLocation: ['location-0', 'location-1'],
+			company:'Maps.me',
+			filterCompany: ['company-0','company-2'],
+			link: 'jobs.html'
+			},
+		{
+			id: '4',
+			position :'Mobile Telemetry',
+			filterPosition: ['positon-0','positon-3'],
+			location:'San Francisco, Washington and Helsinki',
+			filterLocation: ['location-0', 'location-3', 'location-4', 'location-2'],
+			company:'Wannaby',
+			filterCompany: ['company-0','company-3'],
+			link: 'jobs.html'
+			},
+		{
+			id: '5',
+			position :'Vue/React',
+			filterPosition: ['positon-0','positon-4'],
+			location:'Washington',
+			filterLocation: ['location-0', 'location-4'],
+			company:'Aimatter',
+			filterCompany: ['company-0','company-4'],
+			link: 'jobs.html'
+			},
+		{
+			id: '6',
+			position :'Vue/React',
+			filterPosition: ['positon-0','positon-4'],
+			location:'Helsinki',
+			filterLocation: ['location-0', 'location-2'],
+			company:'Wannaby',
+			filterCompany: ['company-0','company-3'],
+			link: 'jobs.html'
+			},
+		{
+			id: '7',
+			position :'Android Engineer',
+			filterPosition: ['positon-0','positon-1'],
+			location:'Minsk, Belarus ',
+			filterLocation: ['location-0', 'location-1'],
+			company:'Aimatter',
+			filterCompany: ['company-0','company-4'],
+			link: 'jobs.html'
+			},
+		{
+			id: '8',
+			position :'Frontend Developer',
+			filterPosition: ['positon-0','positon-2'],
+			location:'Washington',
+			filterLocation: ['location-0', 'location-4'],
+			company:'Voir',
+			filterCompany: ['company-0','company-1'],
+			link: 'jobs.html'
+			},
+		{
+			id: '9',
+			position :'Android Engineer',
+			filterPosition: ['positon-0','positon-1'],
+			location:'Minsk, Belarus ',
+			filterLocation: ['location-0', 'location-1'],
+			company:'Maps.me',
+			filterCompany: ['company-0','company-2'],
+			link: 'jobs.html'
+			},
+		{
+			id: '10',
+			position :'Mobile Telemetry',
+			filterPosition: ['positon-0','positon-3'],
+			location:'San Francisco, Washington and Helsinki',
+			filterLocation: ['location-0', 'location-3', 'location-4', 'location-2'],
+			company:'Wannaby',
+			filterCompany: ['company-0','company-3'],
+			link: 'jobs.html'
+			},
+		
+	]

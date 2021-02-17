@@ -1,0 +1,90 @@
+.info
+	position: fixed
+	right: 20px
+	bottom: 25px
+	z-index: 4
+	width: 400px
+	background: $white
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12)
+	opacity: 0
+	transform: translateY(150%)
+	transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)
+	+r($tablet)
+		right: 13px
+		bottom: 13px
+	+r($mobile)
+		right: 8px
+		bottom: 13px
+		width: calc(100% - 16px)
+	&.visible
+		opacity: 1
+		transform: none
+
+.info__close
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 1
+	width: 36px
+	height: 36px
+	transform-origin: center
+	transition: transform 0.15s linear
+	&:hover
+		+notouch
+			transform: scale(1.1)
+			transition: transform 0.2s linear
+	&::before, &::after
+		content: ''
+		position: absolute
+		top: 18px
+		left: 10px
+		width: 17px
+		height: 1px
+		background: $black
+	&::before
+		transform: rotate(45deg)
+	&::after
+		transform: rotate(-45deg)
+
+.info__link
+	display: flex
+	width: 100%
+
+.info__img
+	width: 114px
+	min-height: 100%
+	flex-shrink: 0
+	+r($mobile)
+		width: 100px
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.info__content
+	padding: 23px
+	padding-top: 21px
+	padding-right: 60px
+	color: $black
+	+r($mobile)
+		padding: 15px
+		padding-top: 16px
+		padding-right: 60px
+
+.info__title
+	margin-bottom: 7px
+	font-size: 16px
+	line-height: calc(24/16)
+	letter-spacing: 0.5px
+	+r($mobile)
+		margin-bottom: 12px
+		font-size: 14px
+		line-height: calc(20/14)
+
+.info__date
+	font-size: 14px
+	line-height: 1.1
+	color: $ultra-light-grey
+	letter-spacing: 0.84px
+	+r($mobile)
+		font-size: 12px

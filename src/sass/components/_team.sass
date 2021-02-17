@@ -1,0 +1,44 @@
+.team
+	padding-bottom: 79px
+	border-bottom: 1px solid $light-grey
+	+r($m-desktop)
+		padding-bottom: 80px
+	+r($tablet)
+		padding-bottom: 30px
+	+r($mobile)
+		padding-bottom: 14px
+
+.team__title
+	padding-top: 116px
+	margin-bottom: 75px
+	+r($mobile)
+		margin-bottom: 34px
+
+.team__list
+	display: flex
+	flex-wrap: wrap
+	+r($mobile)
+		justify-content: space-between
+
+.team__item
+	width: 48.3%
+	margin-right: 1.67%
+	margin-bottom: 70px
+	flex-shrink: 0
+	+r($s-desktop)
+		width: 30%
+		margin-right: 5%
+		&:nth-child(3n)
+			margin-right: 0
+	+r($tablet)
+		width: 45%
+		margin-right: auto
+		&:nth-child(2n)
+			margin-right: 0
+		&:nth-child(3n)
+			margin-right: auto
+	+r($mobile)
+		width: 47.8%
+		margin-right: 0
+		margin-bottom: 25px
+

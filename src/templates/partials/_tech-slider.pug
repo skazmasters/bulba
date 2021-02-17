@@ -1,0 +1,46 @@
+section.container#tech-report
+	h2.page-content__title Belarus tech report 2019
+	div.swiper-container.js-tech-slider.tech-slider
+		button(class="swiper-button-prev tech-slider__prev" type="button")
+			+icon('slider-arrow')
+
+		.tech-slider__container.swiper-wrapper(data-scrambler)
+			.tech-slider__item.swiper-slide
+				.tech-slider__content
+					.tech-slider__left
+						div.tech-slider__image
+							+picture('img/tech/report', true)
+					.tech-slider__right
+						p.tech-slider__title.js-data-scrambler-item
+							| Belarus tech <br> report 2019
+						p.tech-slider__text.js-data-scrambler-item
+							| Complex overview of the state of Belarusian tech including IT industry dynamics & TOP-100 startups database
+						form(class="tech-slider__form tech-form")
+							div(class="tech-form__row tech-form__row--flex")
+								input(class="tech-form__input" type="text" inputmode="email" aria-label="Put your email address here." placeholder="email" autocomplete="off")
+								button(class="tech-form__button" type="button" aria-label="Submit your email.") get report
+							div(class="tech-form__row tech-form__row--flex _hidden")
+								button(class="tech-form__button" type="button" aria-label="Submit your email.") thank you!
+
+
+			.tech-slider__item.swiper-slide
+				.tech-slider__content
+					.tech-slider__left
+						div.tech-slider__image
+							+picture('img/tech/report', true)
+					.tech-slider__right
+						p.tech-slider__title.js-data-scrambler-item
+							| Belarus tech <br> report 2019
+						p.tech-slider__text.js-data-scrambler-item
+							| Complex overview of the state of Belarusian tech including IT industry dynamics & TOP-100 startups database
+						form(class="tech-slider__form tech-form _success")
+							div(class="tech-form__row tech-form__row--flex _hidden")
+								input(class="tech-form__input" type="text" inputmode="email" aria-label="Put your email address here." placeholder="email" autocomplete="off")
+								button(class="tech-form__button" type="button" aria-label="Submit your email.") get report
+							div(class="tech-form__row tech-form__row--flex")
+								button(class="tech-form__button" type="button" aria-label="Submit your email.") thank you!
+
+
+		button(class="swiper-button-next tech-slider__next" type="button")
+			+icon('slider-arrow')
+		.swiper-pagination.tech-slider__pagination

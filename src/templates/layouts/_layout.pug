@@ -1,0 +1,70 @@
+include _mixins
+doctype html
+html(lang="en")
+	head
+		// Global site tag (gtag.js) - Google Analytics
+		script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-124803718-1')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-124803718-1');
+
+		include _head
+
+	body(class='body')
+		script(type="text/javascript").
+			!function(e){function t(o){if(n[o])return n[o].exports;var c=n[o]={exports:{},id:o,loaded:!1};return e[o].call(c.exports,c,c.exports,t),c.loaded=!0,c.exports}var n={};return t.m=e,t.c=n,t.p="/assets/",t(0)}({0:function(e,t,n){n(18),n(19)},18:function(e,t){!function(){"use strict";function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(c))o(localStorage.font_css_cache);else{var e=new XMLHttpRequest;e.open("GET",c,!0),e.onreadystatechange=function(){4===e.readyState&&(o(e.responseText),localStorage.font_css_cache=e.responseText,localStorage.font_css_cache_file=c)},e.send()}else{var n=document.createElement("link");n.href=c,n.rel="stylesheet",n.type="text/css",document.getElementsByTagName("head")[0].appendChild(n),document.cookie="font_css_cache"}}function o(e){var t=document.createElement("style");t.setAttribute("type","text/css"),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t),window.onFontLoad&&window.onFontLoad()}var c=window.fonts_href||"../css/font.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}()},19:function(e,t){}});
+		include ../partials/_svg-template
+
+		//- header-menus for mobile (or desktop) should be plased on the same level as modals for best perfomance (if its possible)
+		.menu#menu_wrapper
+			include ../partials/_menu
+		header.page-header#header
+			block header
+		// Yandex.Metrika counter
+		script.
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter50212990 = new Ya.Metrika2({
+						id:50212990,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						webvisor:true
+						});
+					} catch(e) { }
+				});
+				var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://mc.yandex.ru/metrika/tag.js";
+				if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks2");
+		noscript
+			div
+				img(src='https://mc.yandex.ru/watch/50212990' style='position:absolute; left:-9999px;' alt='')
+		// Yandex.Metrika counter
+		main.page-content
+			block content
+		footer.page-footer#contacts
+			include ../partials/_footer
+
+		//- positioned email button
+		include ../partials/_mail
+
+		//- custom cursor
+		include ../partials/_cursor
+
+		//- info popup
+		//- include ../partials/_info
+
+		//- LOAD SCRIPTS
+		block scripts
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js")
+			script(src="js/app.js")

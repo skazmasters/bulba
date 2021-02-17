@@ -1,0 +1,164 @@
+#tech-report
+	margin-bottom: 121px
+	+r($tablet)
+		margin-bottom: 90px
+	+r($mobile)
+		margin-bottom: 55px
+
+.tech
+	&-slider
+		position: relative
+
+		&.swiper-container
+			padding: 0
+			width: 100%
+			height: 100%
+
+		&__item
+			display: flex
+			justify-content: center
+			align-items: center
+
+		&__content
+			display: flex
+			width: 100%
+			max-width: 800px
+			margin: 0 auto
+			+r($mobile-rotated-w)
+				flex-direction: column
+
+			> *
+				flex: 1 1 40%
+				+r($mobile-rotated-w)
+					flex: 1 1 100%
+
+
+		&__image img
+			max-height: 416px
+
+		&__right
+			align-self: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			+r($mobile-rotated-w)
+				margin-top: 40px
+
+		&__title
+			font-size: 37px
+			line-height: 60px
+			+r($mobile-rotated-w)
+				font-size: 24px
+				line-height: 32px
+
+		&__text
+			margin: 20px 0 40px
+			font-size: 20px
+			line-height: 1.5
+			+r($mobile-rotated-w)
+				margin-top: 10px
+				font-size: 16px
+				line-height: 1.5
+
+
+		&__prev,
+		&__next
+			position: absolute
+			top: 50%
+			z-index: 10
+			display: flex
+			justify-content: center
+			align-items: center
+			max-width: 85px
+			transform: translateY(-50%)
+
+			+r($s-desktop)
+				display: none
+
+			&.swiper-button-disabled svg
+				color: #CCCCCC
+
+			svg
+				align-self: center
+				justify-self: center
+
+		&__prev
+			left: 0
+			transform: translateY(-50%) rotate(180deg)
+
+		&__next
+			right: 0
+
+		&__pagination
+			+r($s-desktop)
+				margin-top: 40px
+
+	&-form
+		position: relative
+
+		&__row
+			&--flex
+				display: flex
+
+			&._hidden
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				opacity: 0
+				appearance: none
+				visibility: hidden
+
+			&._visible
+				opacity: 1
+
+		&__input
+			flex: 0 1 55%
+			max-width: 55%
+			padding: 16px 0 12px
+			border-bottom: 2px solid $black
+			letter-spacing: 0.84px
+			+r($mobile)
+				padding: 10px 0 10px
+
+			+ *
+				margin-left: 10px
+
+		&__button
+			flex: 1 1 42%
+			min-width: 169px
+			padding: 16px 20px 14px
+			color: $white
+			background-color: $black
+			letter-spacing: 0.84px
+			+r($mobile)
+				min-width: auto
+				padding: 10px 10px 10px
+
+		&__input,
+		&__button
+			font-size: 20px
+			line-height: 30px
+			+r($mobile-rotated-w)
+				font-size: 16px
+				line-height: 1.5
+
+
+.swiper-pagination
+	display: none
+	+r($s-desktop)
+		display: flex
+		justify-content: center
+
+	&-bullet
+		width: 12px
+		height: 12px
+		background-color: $grey
+		border-radius: 50%
+
+		&:not(:last-child)
+			margin-right: 10px
+
+		&-active
+			background-color: $black

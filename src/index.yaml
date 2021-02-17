@@ -1,0 +1,12 @@
+ProjectTitle: Start template
+
+PageList:
+- file: page.html
+  name: Главная
+  ready: 95
+- file: jobs.html
+  name: Вакансия
+  ready: 95
+- file: slider.html
+  name: Слайдер
+  ready: 95

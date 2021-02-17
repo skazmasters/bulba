@@ -1,0 +1,132 @@
+include _jobs-card
+include _filters
+
+section.jobs#jobs
+	script#jobs-cards-data(type="application/json").
+		[{
+			"id": "jobs_card_0",
+			"tags": ["android", "mobile", "sanfrancisco", "washington", "helsinki", "voir"],
+			"position": "Android Engineer, Mobile Telemetry",
+			"location": "San Francisco, Washington and Helsinki",
+			"company": "Voir",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_1",
+			"tags": ["android","helsinki", "mapsme"],
+			"position": "Android Engineer",
+			"location": "Helsinki",
+			"company": "Maps.me",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_2",
+			"tags": ["frontend", "washington", "voir"],
+			"position": "Frontend Developer",
+			"location": "Washington",
+			"company": "Voir",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_3",
+			"tags": ["android", "minsk", "mapsme"],
+			"position": "Android Engineer",
+			"location": "Minsk, Belarus",
+			"company": "Maps.me",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_4",
+			"tags": ["mobile", "sanfrancisco", "washington", "helsinki", "wannaby"],
+			"position": "Mobile Telemetry",
+			"location": "San Francisco, Washington and Helsinki",
+			"company": "Wannaby",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_5",
+			"tags": ["vue", "washington", "aimatter"],
+			"position": "Vue/React",
+			"location": "Washington",
+			"company": "Aimatter",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_6",
+			"tags": ["vue", "helsinki", "wannaby"],
+			"position": "Vue/React",
+			"location": "Helsinki",
+			"company": "Wannaby",
+			"link": "jobs.html"
+		}, {
+			"id": "jobs_card_7",
+			"tags": ["android", "minsk", "aimatter"],
+			"position": "Android Engineer",
+			"location": "Minsk, Belarus",
+			"company": "Aimatter",
+			"link": "jobs.html"
+		}]
+
+	.container
+		h2.page-content__title.jobs__title(data-scrambler) Jobs
+		+filters([
+			{
+				title: 'All position',
+				radio: 'position',
+				items: [{
+					title: 'All position',
+					value: ''
+				}, {
+					title: 'Android Engineer',
+					value: 'android'
+				}, {
+					title: 'Frontend Developer',
+					value: 'frontend'
+				}, {
+					title: 'Mobile Telemetry',
+					value: 'mobile'
+				}, {
+					title: 'Vue/React',
+					value: 'vue'
+				}]
+			}, {
+				title: 'All locations',
+				radio: 'location',
+				items: [{
+					title: 'All locations',
+					value: '',
+				}, {
+					title: 'Minsk',
+					value: 'minsk',
+				}, {
+					title: 'Helsinki',
+					value: 'helsinki',
+				}, {
+					title: 'San Francisko',
+					value: 'sanfrancisco',
+				}, {
+					title: 'Washington',
+					value: 'washington',
+				}]
+			}, {
+				title: 'All company',
+				radio: 'company',
+				items: [{
+					title: 'All company',
+					value: ''
+				}, {
+					title: 'Voir',
+					value: 'voir'
+				}, {
+					title: 'Maps.me',
+					value: 'mapsme'
+				}, {
+					title: 'Wannaby',
+					value: 'wannaby'
+				}, {
+					title: 'Aimatter',
+					value: 'aimatter'
+				}]
+			}
+		])
+		//data-empty - сообщение в случае, если нет результатов.
+		ul.jobs-tile.js-jobs-inner(data-empty="No results")
+
+			//- each job in jobs
+			//- 	+jobs-card({title:job.title,company:job.company,location:job.location})
+		button(data-scrambler data-cursor-type="plus").js-jobs-load.jobs-load.crsor-trgr.mouse
+			span More

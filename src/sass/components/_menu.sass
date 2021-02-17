@@ -1,0 +1,112 @@
+.menu
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	pointer-events: none
+	z-index: 150
+
+.menu--visible
+	pointer-events: auto
+
+.main-nav
+	position: relative
+	max-width: 303px
+	height: 100%
+	display: flex
+	flex-direction: column
+	margin-left: auto
+	font-size: 20px
+	line-height: 35px
+	color: $black
+	background-color: #fff
+	border-left: 1px solid $light-grey
+	transform: translateX(120%)
+	will-change: transform
+	z-index: 160
+	pointer-events: auto
+	transition: transform 130ms ease-in
+	+r($mobile)
+		transform: translateY(-120%)
+		max-width: 100%
+		height: 100%
+		font-size: 16px
+		border-left: none
+
+.main-nav__list
+	display: flex
+	flex-direction: column
+	height: 100%
+	overflow-y: auto
+	+r($mobile)
+		height: 100%
+		display: block
+		overflow-y: auto
+
+.main-nav__item
+	position: relative
+	flex-grow: 1
+	border-bottom: 1px solid $light-grey
+	display: flex
+	height: 100%
+	+r($mobile)
+		height: auto
+		display: block
+	&:last-child
+		border-bottom: none
+		+r($mobile)
+			border-bottom: 1px solid $light-grey
+	&:hover
+		background-color: $black
+		outline: 1px solid $black
+		border-bottom: 1px solid $black
+		& a
+			color: white
+
+	& > a
+		height: 100%
+		padding: 0 22px 0 40px
+		color: black
+		line-height: 2.2
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			width: 0
+			height: 100%
+		+r($mobile)
+			padding: 30px 106px 30px 30px
+
+
+.menu--visible .main-nav
+	transform: none
+	transition: transform 330ms ease-out
+
+.main-nav__close
+	display: none
+	cursor: pointer
+	+r($mobile)
+		display: block
+		position: absolute
+		z-index: 2
+		right: 0
+		top: 0
+		width: 42px
+		height: 42px
+
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			top: 8px
+			width: 2px
+			height: 25px
+			background-color: $black
+		&::before
+			left: 20px
+			transform: rotate(-45deg)
+		&::after
+			right: 20px
+			transform: rotate(45deg)

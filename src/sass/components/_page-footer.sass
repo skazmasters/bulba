@@ -1,0 +1,85 @@
+.page-footer
+	position: relative
+	flex: 0 0 auto
+	width: 100%
+	font-size: 78px
+	line-height: 1.14
+	background: url('../img/footer/bg.png') no-repeat
+	background-size: cover
+	// do not delete color to save cursor correct inversion
+	background-color: #ffffff
+	+r($tablet)
+		font-size: 70px
+	+r($tablet)
+		font-size: 50px
+		line-height: 1.2
+	+r($mobile)
+		font-size: 30px
+		line-height: 1.33
+
+.page-footer__container
+	position: relative
+	overflow: hidden
+
+.page-footer__title
+	margin-bottom: 125px
+	padding-top: 240px
+	color: $ultra-light-grey
+	font-size: 28px
+	line-height: 1.1
+	+r($m-desktop)
+		font-size: 20px
+		line-height: 1.5
+	+r($tablet)
+		font-size: 18px
+		margin-bottom: 80px
+		padding-top: 80px
+	+r($mobile)
+		margin-bottom: 22px
+		padding-top: 76px
+		font-size: 16px
+		line-height: 1.9
+
+.page-footer__content
+	max-width: 60%
+	margin-bottom: 78px
+	+r($tablet)
+		margin-bottom: 80px
+	+r($mobile)
+		max-width: 100%
+		margin-bottom: 40px
+
+.page-footer__social-links
+	margin-bottom: 228px
+	+r($tablet)
+		margin-bottom: 120px
+	+r($mobile)
+		margin-bottom: 90px
+
+.page-footer__social-link
+	margin-right: 20px
+
+.page-footer__copyright
+	margin-bottom: 120px
+	font-size: 30px
+	line-height: 1.5
+	color: $ultra-light-grey
+	+r($m-desktop)
+		font-size: 20px
+	+r($tablet)
+		margin-bottom: 80px
+	+r($mobile)
+		margin-bottom: 75px
+		font-size: 16px
+		line-height: 1.88
+
+.page-footer__arrow
+	bottom: 120px
+	left: auto
+	right: calc(100vw / 14)
+	+r($m-desktop)
+		right: 120px
+	+r($s-desktop)
+		right: calc(100vw / 14)
+	+r($mobile)
+		right: calc(100vw / 25)

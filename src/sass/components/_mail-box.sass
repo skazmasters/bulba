@@ -1,0 +1,29 @@
+.mail-box
+	display: none
+	+r($tablet)
+		display: block
+		position: fixed
+		width: 100%
+		bottom: 20px
+		left: 0
+		z-index: 3
+		text-align: right
+
+.mail-box__btn
+	+r($tablet)
+		display: flex
+		width: 60px
+		height: 60px
+		margin-right: 5%
+		margin-left: auto
+		align-items: center
+		text-align: center
+		background-color: $black
+		border-radius: 50%
+		box-shadow: 0px 4px 8px rgba(23, 50, 146, 0.2)
+		& > svg
+			width: 24px
+			height: auto
+			margin-left: 18px
+			margin-right: 18px
+			fill: white

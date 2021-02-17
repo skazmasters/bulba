@@ -1,0 +1,111 @@
+.projects
+	padding-bottom: 122px
+	border-bottom: 1px solid $ultra-light-grey
+	+r($tablet)
+		padding-bottom: 90px
+	+r($mobile)
+		padding-bottom: 45px
+		background-color: $black
+	&--bg-active
+		background-color: $black
+	&.vacancy
+		padding-top: 1px
+
+.projects__main-title
+	padding-top: 158px
+	margin-bottom: 72px
+	+r($mobile)
+		margin-bottom: 20px
+
+.projects__item
+	position: relative
+	display: flex
+	width: 100%
+	margin-bottom: 20px
+	padding-top: 76px
+	padding-bottom: 92px
+	background-color: $white
+	+r($tablet)
+		flex-direction: column
+		padding-top: 40px
+		padding-bottom: 55px
+	+r($mobile)
+		margin-bottom: 15px
+		padding-top: 36px
+		padding-bottom: 36px
+
+.projects__title
+	display: block
+	flex-grow: 1
+	width: 33.33%
+	padding-left: 5%
+	padding-right: 20px
+	font-size: 0
+	line-height: 1.5
+	+r($tablet)
+		width: 100%
+	+r($mobile)
+		padding-left: 4.4%
+		padding-right: 4.4%
+
+	& span
+		font-size: 47px
+		+r($m-desktop)
+			font-size: 37px
+			line-height: 1.6
+		+r($mobile)
+			font-size: 24px
+			line-height: 1.33
+
+.projects__description
+	display: block
+	width: 66.66%
+	padding-right: 8.33%
+	padding-top: 20px
+	font-size: 28px
+	line-height: 1.43
+	+r($m-desktop)
+		font-size: 20px
+		line-height: 1.5
+	+r($tablet)
+		width: 100%
+		padding-left: 5%
+	+r($mobile)
+		padding: 15px 4.3% 8px 4.4%
+		font-size: 16px
+
+	& > p
+		margin-bottom: 31px
+		font-size: inherit
+		&:last-child
+			margin-bottom: 0
+
+.projects__expand
+	display: none
+
+	+r($mobile)
+		display: block
+		position: absolute
+		right: 0
+		bottom: 0
+		font-size: 0
+		width: 50px
+		height: 50px
+		cursor: pointer
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			display: block
+			background-color: $black
+		&::before
+			right: 10px
+			bottom: 24px
+			width: 30px
+			height: 2px
+		&::after
+			right: 24px
+			bottom: 10px
+			width: 2px
+			height: 30px
+

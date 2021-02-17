@@ -1,0 +1,16 @@
+div.page-header__menu-toggle#menu-toggle
+	div.page-header__toggle-icon
+		span.page-header__toggle-icon-part
+		span.page-header__toggle-icon-part
+		span.page-header__toggle-icon-part
+.container.page-header__container
+	.page-header__inner(data-scrambler)
+		a.page-header__logo(href="#", aria-label=":bulba")
+			+icon('header_logo')
+		a.page-header__item.page-header__item--mobile-hidden.crsor-trgr(href="mailto:hello@bulba.com" data-cursor-type="plus")
+			span.is-underlined.js-data-scrambler-item hello@bulba.com
+		a.page-header__item.js-data-scrambler-item.crsor-trgr(href="/ru/" data-cursor-type="plus") рус
+	h1.page-header__title(data-scrambler) Empowering machine learning startups / Funding positive transformation
+	p.page-header__content(data-scrambler) Based in Minsk, Belarus
+	a.arrow.page-header__arrow.js-scroll-to.crsor-trgr(href="#history" data-cursor-type="plus")
+		span.arrow__inner

@@ -1,0 +1,16 @@
+.swiper-container
+	width: 100%
+	overflow-x: hidden
+	padding-left: calc(100vw / 14)
+	+r($m-desktop)
+		padding-left: 120px
+	+r($s-desktop)
+		padding-left: calc(100vw / 14)
+	+r($mobile)
+		padding-left: calc(100vw / 25)
+
+.swiper-wrapper
+	display: flex
+
+.swiper-slide
+	flex-shrink: 0

@@ -1,0 +1,20 @@
+.word
+	font-size: 0
+	display: inline-block
+
+.word__letter
+	font-size: 28px
+	font-style: normal
+	+r($m-desktop)
+		font-size: 20px
+	+r($mobile)
+		font-size: 16px
+
+	&--blue
+		color: $google-blue
+	&--red
+		color: $google-red
+	&--yellow
+		color: $google-yellow
+	&--green
+		color: $google-green

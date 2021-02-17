@@ -1,0 +1,73 @@
+.arrow
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 65px
+	height: 83px
+	cursor: pointer
+	animation-name: arrow-down
+	animation-duration: 1s
+	animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+	animation-iteration-count: infinite
+	+media_max($mobile-rotated-w, $mobile)
+		display: none
+	+r($mobile)
+		display: none
+
+	&__inner
+		display: block
+		position: relative
+		left: 30px
+		width: 4px
+		height: 83px
+		background-color: $black
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -7px
+			width: 4px
+			height: 45px
+			background-color: $black
+		&::before
+			left: -15px
+			transform: rotate(-45deg)
+		&::after
+			right: -15px
+			transform: rotate(45deg)
+
+	&--up
+		animation: none
+		transform: translateY(400px)
+		& .arrow__inner
+			&::before, &::after
+				bottom: 45px
+			&::before
+				left: 15px
+			&::after
+				right: 15px
+
+	&--active
+		transform: none
+		transition: transform 0.7s linear
+		animation-name: arrow-up
+		animation-duration: 1s
+		animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1)
+		animation-iteration-count: infinite
+		animation-delay: 0.7s
+
+@keyframes arrow-down
+	from
+		transform: none
+	30%
+		transform: translateY(24%)
+	to
+		transform: none
+
+@keyframes arrow-up
+	from
+		transform: none
+	30%
+		transform: translateY(-24%)
+	to
+		transform: none

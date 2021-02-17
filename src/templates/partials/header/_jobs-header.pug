@@ -1,0 +1,26 @@
+div.page-header__menu-toggle#menu-toggle
+	div.page-header__toggle-icon
+		span.page-header__toggle-icon-part
+		span.page-header__toggle-icon-part
+		span.page-header__toggle-icon-part
+.container.page-header__container
+	.page-header__inner(data-scrambler)
+		a.page-header__logo(href="#", aria-label=":bulba")
+			+icon('header_logo')
+		a.page-header__item.page-header__item--mobile-hidden.crsor-trgr(href="mailto:hello@bulba.com" data-cursor-type="plus")
+			span.is-underlined.js-data-scrambler-item hello@bulba.com
+		a.page-header__item.js-data-scrambler-item.crsor-trgr(href="/ru/" data-cursor-type="plus") рус
+	.page-header-bg(style="background-image:url(img/vacancy/vacancy-b@2.png)")
+	.page-header__vacancy(data-scrambler)
+		a.back-link.is-underlined.crsor-trgr(data-cursor-type="plus")(href="/")
+			span.back-link__icon
+				<svg width="45" height="36" viewBox="0 0 45 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M44.4443 16.4907L44.4443 18.6515L1.60632 18.6515L1.60632 16.4907L44.4443 16.4907Z" fill="black"/>
+					<path d="M17.4172 -1.18139e-06L18.9318 1.52792L1.51444 19.099L-0.00010758 17.5711L17.4172 -1.18139e-06Z" fill="black"/>
+					<path d="M-0.00010758 17.5711L1.51445 16.0431L18.9318 33.6142L17.4172 35.1421L-0.00010758 17.5711Z" fill="black"/>
+				</svg>
+
+			span.back-link__text.js-data-scrambler-item Back to job openings
+		h1.jobs-header__title.js-data-scrambler-item Android Engineer, Mobile Telemetry
+		p.jobs-header__company.js-data-scrambler-item Maps.me
+		p.jobs-header__location.js-data-scrambler-item San Francisco, Washington, D.C., and Helsinki

@@ -1,0 +1,97 @@
+.filters
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	width: calc(100% + 20px)
+	margin: 0 -10px
+	+r($tablet)
+		width: 100%
+		margin: 0
+
+.filters-item
+	width: calc(33.33% - 20px)
+	margin: 10px
+	outline: 1px solid #E7E9F5
+	flex-shrink: 0
+	position: relative
+	font-size: 20px
+	line-height: calc(24/20)
+	color: #FFFFFF
+	background: $black
+	+r($tablet)
+		width: 100%
+		margin: 10px 0
+
+.filters-item-head
+	display: flex
+	justify-content: space-between
+	padding: 17px 24px
+
+.filters-item-head__text
+	color: $white
+	letter-spacing: 1px
+	white-space: nowrap
+	text-overflow: ellipsis
+	overflow: hidden
+
+.filters-item-head__icon
+	color: $white
+	transition: color .3s, transfrom .3s
+	margin-left: 15px
+
+
+
+.filters-item-body
+	padding: 7px 0
+	outline: 1px solid #E7E9F5
+	position: absolute
+	top: 0px
+	left: 0px
+	z-index: 1
+	width: 100%
+	background: $black
+	opacity: 0
+	visibility: hidden
+	transform: translateY(-15px)
+	transition: opacity .2s, transform .2s, visibility 0s .2s
+	&.show-filter
+		visibility: visible
+		opacity: 1
+		transform: translateY(0)
+		transition: opacity .2s .1s, transform .2s .1s, visibility 0s 0s
+
+.filters-item-body__item
+	display: flex
+	padding: 10px 24px
+	position: relative
+	&:not(:last-child)
+		margin-bottom: 13px
+	&:hover
+		.filters-item-body__text
+			color: $google-yellow
+			transition: color .3s
+.filters-item-body__icon
+	margin-right: 20px
+	opacity: 0
+	transform: translateY(-5px)
+	transition: opacity .3s, transform .3s
+
+.filters-item-body__text
+	color: $white
+	transition: color .3s
+
+.filters-item-check
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	opacity: 0
+	&:checked ~ .filters-item-body__icon
+		opacity: 1
+		transform: translateY(0)
+		transition: opacity .3s, transform .3s
+	&:checked ~ .filters-item-body__text
+		color: $yellow
+		transition: color .3s

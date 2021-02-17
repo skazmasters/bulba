@@ -1,0 +1,94 @@
+.is-underlined
+	position: relative
+	display: inline-block
+	color: $black
+	z-index: 3
+	line-height: 1
+
+	&::before
+		content: ''
+		position: absolute
+		bottom: -2px
+		left: -3px
+		right: -3px
+		display: block
+		height: 40%
+		background-color: $yellow
+		z-index: -1
+		transform: scaleX(0)
+		transform-origin: 0 50%
+		transition: transform 1s cubic-bezier(.8,.03,.25,1)
+		+r($mobile)
+			height: 45%
+			bottom: -1px
+
+	&--orange
+		&::before
+			background-color: $orange
+	&--large
+		line-height: 1.2
+		&::before
+			bottom: 5px
+			height: 28%
+			+r($m-desktop)
+				bottom: 1px
+			+r($mobile)
+				height: 30%
+	&--right-short
+		&::before
+			right: 15px
+			+r($m-desktop)
+				right: 11px
+			+r($mobile)
+				right: 8px
+	&--active
+		&::before
+			transform: scaleX(1)
+
+.is-underlined + .is-underlined::before
+	left: -15px
+	transition-delay: 0.8s
+	transition-timing-function: linear
+	transition-duration: 0.5s
+	+r(1024)
+		left: -4px
+	+r(899)
+		left: -10px
+	+r(691)
+		left: -10px
+	+r(500)
+		left: -7px
+
+.is-underlined + .is-underlined + .is-underlined::before
+	transition-delay: 1.2s
+
+.back-link
+	display: inline-block
+	font-size: 20px
+	line-height: calc(30/20)
+	margin-bottom: 30px
+	&::before
+		width: 100%
+		left: 0
+		right: 0
+	+r($mobile)
+		margin-bottom: 50px
+		&::before
+			bottom: 0
+			height: 50%
+	// display: inline-flex
+	// align-items: center
+
+.back-link__icon
+	display: inline-block
+	vertical-align: middle
+	width: 30px
+	height: 20px
+	+r($mobile)
+		width: 45px
+		height: 36px
+.back-link__text
+	display: inline-block
+	vertical-align: middle
+	+r($mobile)
+		display: none

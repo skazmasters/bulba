@@ -1,0 +1,79 @@
+.vacancy
+	padding-top: 170px
+	padding-bottom: 122px
+	border-bottom: 1px solid $ultra-light-grey
+	+r($m-desktop)
+		padding-top: 130px
+		padding-bottom: 90px
+	+r(1024)
+		padding-bottom: 50px
+		padding-top: 70px
+	+r($mobile)
+		padding-top: 50px
+		padding-bottom: 45px
+
+.vacancy-item
+	position: relative
+	display: flex
+	width: 100%
+	margin-bottom: 20px
+	padding-top: 25px
+	padding-bottom: 25px
+	background-color: $white
+	+r($m-desktop)
+		padding-top: 20px
+		padding-bottom: 20px
+		margin-bottom: 30px
+	+r(1024)
+		flex-direction: column
+	+rm(1600)
+		margin-bottom: 32px
+
+.vacancy-item__title
+	display: block
+	flex-grow: 1
+	padding-right: 20px
+	font-size: 0
+	line-height: 1.5
+	width: 33.33%
+	+r(1024)
+		width: 100%
+	+rm(1600)
+		width: 30%
+	& span
+		font-size: 37px
+		line-height: 1.6
+		+r($tablet)
+			font-size: 24px
+			line-height: 1.33
+		+rm(1600)
+			font-size: 47px
+			line-height: calc(70/47)
+
+.vacancy-item__description
+	display: block
+	padding-left: 7px
+	padding-top: 20px
+	font-size: 20px
+	line-height: calc(30/20)
+	width: 66.66%
+	&--accent
+		+rm(1600)
+			font-size: 28px
+			line-height: calc(40/28)
+	+r($m-desktop)
+		padding-top: 10px
+	+r(1024)
+		width: 100%
+		padding-left: 0
+	+r($mobile)
+		font-size: 16px
+		line-height: calc(24/16)
+	+rm(1600)
+		width: 70%
+		padding-left: 15px
+	& > p
+		margin-bottom: 20px
+		font-size: inherit
+		&:last-child
+			margin-bottom: 0

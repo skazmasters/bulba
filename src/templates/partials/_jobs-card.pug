@@ -1,0 +1,7 @@
+mixin jobs-card(prop={})
+	li.jobs-card.crsor-trgr.mouse(data-cursor-type="plus" data-scrambler)
+		a.jobs-card__link(target="_blank" href="/jobs.html")
+			h4.jobs-card__title
+				span.js-data-scrambler-item!= prop.title
+			p.jobs-card__company.js-data-scrambler-item!= prop.company
+			span.jobs-card__location.js-data-scrambler-item!= prop.location

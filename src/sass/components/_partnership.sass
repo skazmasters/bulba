@@ -1,0 +1,24 @@
+.partnership
+	padding-bottom: 10px
+
+.partnership__title
+	padding-top: 118px
+	margin-bottom: 59px
+	+r($mobile)
+		margin-bottom: 6px
+
+.partnership__list
+	display: flex
+
+.partnership__item
+	display: flex
+	align-items: center
+	width: 280px
+	height: 100px
+	+r($mobile)
+		width: 31%
+	&:last-child
+		width: 100%
+		padding-right: calc(100% - 280px)
+		+r($mobile)
+			padding-right: calc(100% - 31%)
